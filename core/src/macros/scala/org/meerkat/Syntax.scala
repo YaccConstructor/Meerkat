@@ -53,8 +53,8 @@ object Syntax {
 
   def syn[L, T](p: Parsers.AlternationBuilder[L, T]): Nonterminal[L] & T= macro makeNonterminalAltWithName[L, T]
   def syn[L, T](p: Parsers.SequenceBuilder[L, T]): Nonterminal[L] & T= macro makeNonterminalSeqWithName[L, T]
-//  def syn[L, T](p: AbstractSymbol[L, NonPackedNode, T]): Nonterminal[L] & T= macro makeNonterminalSymWithName[L, T]
-  def syn[L, T](p: Symbol[L, T]): Nonterminal[L] & T= macro makeNonterminalSymWithName[L, T]
+  def syn[L, T](p: AbstractSymbol[L, NonPackedNode, T]): Nonterminal[L] & T= macro makeNonterminalSymWithName[L, T]
+//  def syn[L, T](p: Symbol[L, T]): Nonterminal[L] & T= macro makeNonterminalSymWithName[L, T]
 
   def not[L, T](p: AbstractSymbol[L, NonPackedNode, T]): Nonterminal[L] & T= macro makeNegativeSymWithName[L, T]
 
