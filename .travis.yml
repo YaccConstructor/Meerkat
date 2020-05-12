@@ -3,3 +3,5 @@ scala:
    - 2.12.2
 jdk:
   - openjdk8
+script:
+  - travis_wait 20 sbt ++$TRAVIS_SCALA_VERSION -v test 
