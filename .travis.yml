@@ -4,4 +4,4 @@ scala:
 jdk:
   - openjdk8
 script:
-  - travis_wait 20 sbt ++$TRAVIS_SCALA_VERSION -v test 
+  - sbt -v ++$TRAVIS_SCALA_VERSION test 
