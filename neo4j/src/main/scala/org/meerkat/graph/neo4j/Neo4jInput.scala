@@ -47,7 +47,7 @@ class Neo4jInput(db: GraphDatabaseService) extends Input[Entity, Entity] {
 
 object Neo4jInput {
 
-  class Entity(entity: PropertyContainer) extends Dynamic {
+  class Entity(val entity: PropertyContainer) extends Dynamic {
     def label(): String = entity match {
       case node: Node =>
         node.getLabels.asScala.head.name()
